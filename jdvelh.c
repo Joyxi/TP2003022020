@@ -9,6 +9,7 @@ int Decision = 0;
 int or = 0;
 int pdv = 0;
 
+
 struct Chapitre {
 	char *description;
 	int or;
