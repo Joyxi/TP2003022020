@@ -30,21 +30,24 @@ int main(){
 	
 	
 	printf("Vous etes au %s \n",chapitre1);
-	//printf("Chapitre %d\n",chapitre.tabChap[0]);
+	
 	printf("Bonjour voyageur. Ou souhaitez-vous aller ?\n");
 	printf("1-Miami; 2-Toronto;\n");
 	scanf("%d",&Choix);
 	
 	if(Choix==1){
 		printf("Vous etes arrives a destination de Miami.\n");
-		printf("Vous etes au %s,vous avez %d or,votre niveau de vie: %d, Acces chapitres: %d \n",chapitre2);
+		printf("Vous etes au %s,vous avez %d or,votre niveau de vie: %d \n",chapitre2);
 	}
 	if(Choix==2){
 		printf("Vous etes arrives a destination de Toronto.\n");
 		printf("Vous etes au %s \n",chapitre3);
 	}
 	
+	printf("Ou souhaitez-vous aller ?\n");
 	scanf("%d",&Choix);
 	
+	
+	return 0;
 };
 
