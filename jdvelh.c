@@ -3,6 +3,9 @@
 #include <stdlib.h>
 
 int Choix = 0;
+int numChap = 0;
+int i=0;
+int Decision = 0;
 
 struct Chapitre {
 	char *description;
@@ -11,7 +14,7 @@ struct Chapitre {
 	int tabChap[11];
 };
 
-//int tab[9] = {1,2,3,4,5,6,7,8,9,10};
+int tab[10] = {1,2,3,4,5,6,7,8,9,10};
 
 typedef struct Chapitre chapitre;
 
@@ -44,9 +47,32 @@ int main(){
 		printf("Vous etes au %s \n",chapitre3);
 	}
 	
-	printf("Ou souhaitez-vous aller ?\n");
-	scanf("%d",&Choix);
+	//tab[Choix];
 	
+	for (i=0;i<10;i++){
+		numChap = Choix;
+		printf("Avancer dans l'histoire (choix 1) ou retour (choix 2) \n");
+		scanf("%d",&Decision);
+		if(Decision==1){
+			printf("Ou souhaitez-vous aller ?\n");
+			scanf("%d",&Choix);
+			printf("Vous etes au chapitre %d \n",Choix);
+			printf("Chapitre precedemment visite: %d \n",numChap);
+		}
+		if (Decision==2){
+			printf("A quel chapitre revenir ?\n");
+			scanf("%d",&Choix);
+			if(Choix>numChap){
+				printf("Retour impossible, vous n'avez pas encore visite ce lieu. Veuillez entrer un numero de chapitre correct. \n");
+				scanf("%d",&Choix);
+			}
+			else{
+				printf("Vous etes au chapitre %d \n",Choix);
+				printf("Chapitre precedemment visite: %d \n",numChap);
+			}
+		}
+		//printf("Vous etes arrives a destination de Miami.\n");
+	};
 	
 	return 0;
 };
